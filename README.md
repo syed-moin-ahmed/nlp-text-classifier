@@ -4,6 +4,10 @@ NLP Text Classification System
 
 This project is a system that uses Natural Language Processing to classify text into categories. It uses machine learning to do this.
 
+🚀 Live App
+
+https://nlp-text-classifier-z6eyltgjchj8v2ps7xpck5.streamlit.app/
+
 🚀 Features
 
 * The system cleans up the text. Breaks it down into smaller parts
