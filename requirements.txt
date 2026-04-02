@@ -9,4 +9,4 @@ PyPDF2
 pdfplumber
 wordcloud
 joblib
-
+plotly
