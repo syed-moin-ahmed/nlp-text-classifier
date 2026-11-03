@@ -198,7 +198,7 @@ st.markdown("""
     <p style="font-size: 1.2rem; opacity: 0.9;">Powered by Machine Learning & Natural Language Processing</p>
     <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 1rem;">
         <span style="background: rgba(255,255,255,0.2); padding: 0.3rem 1rem; border-radius: 50px;">🤖 24 Categories</span>
-        <span style="background: rgba(255,255,255,0.2); padding: 0.3rem 1rem; border-radius: 50px;">⚡ 95% Accuracy</span>
+        <span style="background: rgba(255,255,255,0.2); padding: 0.3rem 1rem; border-radius: 50px;">⚡ 61% Test Accuracy</span>
         <span style="background: rgba(255,255,255,0.2); padding: 0.3rem 1rem; border-radius: 50px;">📊 Real-time Analysis</span>
     </div>
 </div>
@@ -309,7 +309,7 @@ with st.sidebar:
             <li>🤖 Advanced NLP</li>
             <li>📄 PDF Support</li>
             <li>⚡ Instant Results</li>
-            <li>🎯 95%+ Accuracy</li>
+            <li>🎯 61% Test Accuracy</li>
         </ul>
     </div>
     """, unsafe_allow_html=True)
@@ -327,14 +327,14 @@ with st.sidebar:
     with col2:
         st.markdown("""
         <div class="stat-box">
-            <h3>95%</h3>
+            <h3>61%</h3>
             <p>Accuracy</p>
         </div>
         """, unsafe_allow_html=True)
     
     # Sample categories
     st.markdown("### 🏷️ Sample Categories")
-    categories = ["DATA SCIENCE", "WEB DEVELOPING", "HR", "FINANCE", "HEALTHCARE", "ENGINEERING", "SALES", "TEACHER"]
+    categories = ["INFORMATION-TECHNOLOGY", "DESIGNER", "HR", "FINANCE", "HEALTHCARE", "ENGINEERING", "SALES", "TEACHER"]
     for cat in categories:
         st.markdown(f"<span class='keyword-tag'>{cat}</span>", unsafe_allow_html=True)
 
@@ -550,7 +550,7 @@ if tfidf is not None and model is not None and encoder is not None:
         st.markdown("""
         <div style="text-align: center; padding: 1rem;">
             <h3 style="color: #667eea;">🚀 Fast & Accurate</h3>
-            <p>Get results in seconds with 95%+ accuracy</p>
+            <p>Get results in seconds</p>
         </div>
         """, unsafe_allow_html=True)
     

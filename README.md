@@ -1,67 +1,45 @@
-NLP Text Classification System
+# NLP Resume Classifier
 
-📌 Overview
+Classifies a resume into one of 24 job categories using natural language processing and machine learning. Paste resume text or upload a PDF, and the app returns the predicted category with its top-3 predictions.
 
-This project is a system that uses Natural Language Processing to classify text into categories. It uses machine learning to do this.
+**Live app:** https://nlp-text-classifier-z6eyltgjchj8v2ps7xpck5.streamlit.app/
 
-🚀 Live App
+## How it works
 
-https://nlp-text-classifier-z6eyltgjchj8v2ps7xpck5.streamlit.app/
+1. **Clean the text:** tokenization, stop word removal and lemmatization with NLTK
+2. **Extract features:** convert text into TF-IDF vectors
+3. **Classify:** predict the job category with a linear SVM
+4. **Show results:** display the prediction and top-3 categories in a Streamlit app
 
-🚀 Features
+## Results
 
-* The system cleans up the text. Breaks it down into smaller parts
+Models were trained on 1,987 resumes (1,589 training, 398 test) across 24 categories.
 
-* It uses a technique called TF-IDF to extract features from the text
+| Model | Test accuracy |
+|-------|---------------|
+| **Linear SVM** | **61.3%** |
+| Logistic Regression | 59.8% |
+| Naive Bayes | 52.5% |
 
-* The system uses a machine learning model that has been trained to classify text
+Training code is in [notebooks/model_training.ipynb](notebooks/model_training.ipynb). The dataset is not included in this repo.
 
-* You can use a web interface to get predictions in time
+## Tools
 
-🛠️ Technologies Used
+Python, scikit-learn, NLTK, pandas, NumPy, Streamlit, Plotly, pdfplumber, joblib
 
-* Python is the programming language used
+## Run locally
 
-* Scikit-learn is used for machine learning
+```bash
+git clone https://github.com/syed-moin-ahmed/nlp-text-classifier.git
+cd nlp-text-classifier
+pip install -r requirements.txt
+streamlit run app.py
+```
 
-* NLTK is used for natural language processing
+## Next steps
 
-* Pandas and NumPy are used for data handling
+Try a larger dataset and transformer models such as BERT to improve accuracy.
 
-* Streamlit is used for the web interface
+## Author
 
-📊 Model Details
-
-* The system uses TF-IDF to convert text into numbers
-
-* The model is a machine learning classifier
-
-* The output is the category that the text belongs to
-
-🔄 Workflow
-
-1. Collecting data
-
-2. Cleaning up the text
-
-3. Extracting features from the text
-
-4. Training the model
-
-5. Making predictions
-
-▶️ How to Run
-
-You need to install the required packages by running pip install -r requirements.txt. Then you can run the system by running streamlit run app.py.
-
-💡 Example
-
-If you input "This product is really good and exceeded my expectations" the NLP Text Classification System will output "Positive".
-
-🌐 Future Improvements
-
-The NLP Text Classification System can be improved by using learning models, like LSTM or BERT. The model can be made accurate by using larger datasets. The system can also be deployed on cloud platforms.
-
-👨‍💻 Author
-
-Syed Moin Ahmed
+Syed Moin Ahmed: [LinkedIn](https://www.linkedin.com/in/syed-moin-ahmed-710812325/) | [GitHub](https://github.com/syed-moin-ahmed)
